@@ -1,0 +1,699 @@
+[
+  {
+    "url": "https://tuboleto.cultura.pe/assets/i18n/es.json",
+    "body": {
+      "header": {
+        "cart": "Mi carrito",
+        "language": "Idioma",
+        "login": "Iniciar Sesión",
+        "loggedInAs": "Sesión iniciada como:",
+        "myPurchases": "Mis compras",
+        "myReservations": "Mis reservas",
+        "logout": "Cerrar sesión",
+        "findTicket": "Valida TuBoleto"
+      },
+      "carrito": {
+        "title": "Carrito de compras",
+        "empty": "Tu carrito está vacío",
+        "home": "Ir al inicio",
+        "item": "Artículo",
+        "route": "Ruta",
+        "date": "Fecha",
+        "time": "Horario",
+        "quantity": "Cantidad",
+        "total": "Total",
+        "ticket": "boletos",
+        "form": {
+          "buttons": {
+            "delete": "Eliminar",
+            "continue": "Continuar",
+            "cancel": "Cancelar",
+            "home": "Ir al inicio"
+          }
+        }
+      },
+      "notification": {
+        "beta": "Funcionalidad en desarrollo, no disponible en todos los módulos."
+      },
+      "messages": {
+        "system": {
+          "title": "Mensaje del sistema"
+        },
+        "delete": {
+          "title": "Eliminar",
+          "description": "¿Estás seguro de eliminar?"
+        },
+        "success": {
+          "title": "Éxito",
+          "description": "Operación realizada con éxito."
+        },
+        "error": {
+          "title": "Error",
+          "description": "Ha ocurrido un error, por favor intenta nuevamente."
+        },
+        "actions": {
+          "confirm": {
+            "label": "Aceptar"
+          },
+          "cancel": {
+            "label": "Cancelar"
+          },
+          "close": {
+            "label": "Cerrar"
+          }
+        }
+      },
+      "login": {
+        "user_label": "Ingresa tu usuario",
+        "user_error_label": "El usuario es requerido",
+        "user_error_email": "Por favor ingrese un correo electrónico válido.",
+        "password_label": "Ingresa tu contraseña",
+        "password_error_label": "La contraseña es requerida",
+        "submit_button": "Iniciar Sesión",
+        "recaptcha_label": "Verifica que no eres un robot",
+        "recaptcha_error_label": "La verificación es requerida",
+        "forgot_password": "¿Olvidaste tu contraseña?",
+        "dont_have_account": "¿No tienes una cuenta?",
+        "sign_up": "Registrarse",
+        "example_mail": "ejemplo@mail.com",
+        "messages": {
+          "login_success": "Inicio de sesión exitoso",
+          "login_failure": "Error en el inicio de sesión",
+          "soon_message": "La plataforma muy pronto iniciará operaciones",
+          "retry_message": "Por favor, vuelva a intentarlo.",
+          "user_data_error": "Ocurrió un error al intentar obtener los datos del usuario.",
+          "session_error": "Ocurrió un error al intentar insertar la sesión del usuario.",
+          "close_session_error": "Ocurrió un error al intentar cerrar la otra sesión del usuario.",
+          "sync_time_error": "Por temas de seguridad, debe sincronizar la fecha y hora de su equipo con el horario de internet.",
+          "recaptcha_error": "Error de verificación de seguridad. Por favor, intente nuevamente."
+        }
+      },
+      "forgot_password": {
+        "title": "Restablecer contraseña",
+        "description": "Ingresa tu correo electrónico para recibir las instrucciones y crear una nueva contraseña segura.",
+        "email_label": "Correo electrónico",
+        "email_required": "El campo correo electrónico es requerido.",
+        "email_invalid": "Por favor ingrese un correo electrónico válido.",
+        "submit_button": "Enviar enlace",
+        "back_to_login": "Regresar a",
+        "login": "Inicio de Sesión",
+        "messages": {
+          "success": {
+            "title": "¡Correo enviado!",
+            "description": "Se ha enviado un enlace a su correo {{ email }} con las instrucciones para restablecer su contraseña."
+          },
+          "error": {
+            "title": "Error en el envío",
+            "description": "No se pudo enviar el enlace para restablecer la contraseña."
+          }
+        },
+        "email_example": "ejemplo@mail.com"
+      },
+      "descripcion": {
+        "buying": "Comprar",
+        "ubication": "Ubicación",
+        "altur": "Altura",
+        "vermap": "Ver mapa",
+        "horat": "Horario de atención",
+        "descript": "Descripción",
+        "conocircui": "Conoce todos los circuitos",
+        "rutacircui": "Rutas del circuito",
+        "verut": "Ver ruta",
+        "vervide": "Ver video",
+        "ruta": "Ruta"
+      },
+      "lugar": {
+        "bienven": "Bienvenidos a",
+        "compart": "Compartir en"
+      },
+      "boletos": {
+        "adqbol": "Adquiere tu boleto",
+        "selerutvi": "Selecciona la ruta que desea visitar",
+        "selecirvi": "Selecciona el circuito que deseas visitar",
+        "selerutrec": "Seleccionar la ruta de tu recorrido",
+        "selecir": "Selecciona tu circuito",
+        "selefecvi": "Selecciona la fecha de tu visita",
+        "selehorin": "Selecciona el horario de ingreso",
+        "selecproce": "Selecciona tu procedencia",
+        "completarif": "Debe de completar los campos de arriba para poder ver las tarifas.",
+        "agrecar": "Agregar al Carrito",
+        "ircar": "Ir al carrito",
+        "total": "Total",
+        "selcanbtar": "Selecciona la cantidad de boletos según tarifa",
+        "origind": "Si usted es originario de ",
+        "selopc": " por favor seleccione la opción ",
+        "horacupo1": "NO DISPONIBLE",
+        "horacupo2": "AGOTADO",
+        "numboleto": "boletos",
+        "messages": {
+          "extranjero": {
+            "line1": "Máximo",
+            "line2": "visitantes por reserva.",
+            "line3": "Presentar ",
+            "line4": "Pasaporte ",
+            "line5": "en físico con su respectivo boleto en el punto de ingreso.",
+            "line6": "Niños menores a 3 años tienen ingreso libre."
+          },
+          "can": {
+            "line1": "Máximo 5 visitantes por reserva.",
+            "line2": "Presentar Pasaporte o Cédula de Identificación para",
+            "line3": "con su respectivo boleto en el punto de ingreso",
+            "line4": "Tarifa promocional del 50% de descuento en horario de",
+            "line5": "Niños menores a 3 años tienen ingreso libre."
+          },
+          "residentextranjero": {
+            "line1": "Máximo 5 visitantes por reserva.",
+            "line2": "Residente extranjero",
+            "line3": "en el Perú: presentar ",
+            "line4": "Carné de Extranjería físico vigente con su respectivo boleto en el punto de ingreso.",
+            "line5": "Tarifa promocional del 50% de descuento en horario de",
+            "line6": "Niños menores a 3 años tienen ingreso libre."
+          },
+          "peruano": {
+            "line1": "Máximo",
+            "line2": "visitantes por reserva.",
+            "line3": "Niños menores a 3 años tienen ingreso libre.",
+            "line4": "Presentar DNI físico vigente con su respectivo boleto en el punto de ingreso.",
+            "line5": "Tarifa especial: presentar documento oficial que acredite la condición."
+          },
+          "residentelocal": {
+            "line1": "Máximo 5 visitantes por reserva.",
+            "line2": "Aplica para cusqueños y cusqueñas nacidos en Cusco, y peruanos residentes en Cusco con DNI físico y vigente. ",
+            "line3": "Ingreso libre solo los días domingos según disponibilidad de aforo. ",
+            "line4": "Niños menores a 3 años tienen ingreso libre.",
+            "line5": "Presentar DNI físico vigente con su respectivo boleto en el punto de ingreso.",
+            "line6": "Tarifa especial: presentar documento oficial que acredite la condición."
+          }
+        },
+        "confirmation": {
+          "title": "Se agregó al carrito de compras.",
+          "message": "Puede seguir agregando al carrito o continuar con el ingreso de los datos de los visitantes para generar la reserva.",
+          "actions": {
+            "continue": {
+              "label": "Seguir agregando"
+            },
+            "confirm": {
+              "label": "Continuar"
+            }
+          }
+        }
+      },
+      "footer": {
+        "canales": "Canales de atención de TuBoleto"
+      },
+      "reserva": {
+        "title": "Datos de tus boletos",
+        "subtitle": "Ingresa los datos de los visitantes.",
+        "passed1": "Datos de tus boletos",
+        "passed2": "Confirmación de Reserva",
+        "confirmation": {
+          "line1": "Estimado Usuario, para evitar inconvenientes técnicos con el proveedor externo que procesa el pago, lo cual podría generar la anulación de su(s) reserva(s), le recomendamos completar el pago al",
+          "line2": "menos 5 minutos antes",
+          "line3": "de la fecha y hora de vencimiento.",
+          "line4": "En caso alguna de sus reservas sea anulada durante el proceso de pago, se procederá con la",
+          "line5": "devolución total del importe pagado.",
+          "reservenc": "Esta reserva vence el",
+          "reserve": "Reserva",
+          "download": "Descargando...",
+          "downloadreserve": "Descargar reserva",
+          "destination": "Destino",
+          "fechoring": "Fecha y hora de ingreso",
+          "gooreserve": "Ir a mis reservas",
+          "payreserve": "Pagar reserva",
+          "payreserves": "Pagar reservas",
+          "reservaPaymentWarning": "Algunas de tus reservas no permiten el pago en este momento. Por favor, revisa los detalles en tu historial de reservas."
+        },
+        "passed3": "Pago",
+        "reserveconfirmation": {
+          "inperson": "Presencial",
+          "forms_inperson": {
+            "line1": "REALIZA EL PAGO DE TU RESERVA DENTRO DE LAS HORAS DISPONIBLES.",
+            "line2": "Puedes descargarlo y pagarlo de manera presencial en las oficinas de recaudación autorizadas.",
+            "line3": "Lugares autorizados",
+            "line4": "Banco de la nación",
+            "line5": "Todas las agencias del Banco de la Nación a nivel nacional",
+            "line6": "Horarios de atención",
+            "line7": "Lunes a viernes de 08:30 am a 05:30 pm",
+            "line8": "Sábados de 09:00 am a 01:00 pm",
+            "line9": "Oficinas de Recaudación",
+            "line10": "Calle Heladeros 165, Cusco - (Museo Casa Garcilaso)",
+            "line11": "Horarios de atención",
+            "line12": "Lunes a sábados de 07:00 am a 07:30 pm",
+            "amount": "Monto a pagar",
+            "btn1": "Ir a mis reservas",
+            "btn2": "Descargar reserva",
+            "btn3": "Descargar reservas"
+          },
+          "online": "Online",
+          "fecvenc": "Vence el",
+          "line1": "Estimado Usuario, para evitar inconvenientes técnicos con el proveedor externo que procesa el pago, lo cual podría generar la anulación de su(s) reserva(s), le recomendamos completar el pago al",
+          "line2": "menos 5 minutos antes",
+          "line3": "de la fecha y hora de vencimiento.",
+          "line4": "En caso alguna de sus reservas sea anulada durante el proceso de pago, se procederá con la",
+          "line5": "devolución total del importe pagado.",
+          "additional": "Adicional",
+          "used_tarjet": " por uso de tarjeta",
+          "artley": "Según el Art. 7.1 de la Ley Nº 29571",
+          "gooreserve": "Ir a mis reservas",
+          "download": "Cargando...",
+          "pay": "Pagar",
+          "warning": {
+            "title": "Advertencia",
+            "message1": "La reserva ",
+            "message2": " se encuentra anulada"
+          },
+          "commission": "Al confirmar la selección usted está aceptando las comisiones establecidas por tipo de tarjeta"
+        },
+        "showtext": {
+          "passed1": {
+            "line1": "Cada boleto es nominal e intransferible, registre correctamente sus datos personales.",
+            "line2": "Para los ciudadanos peruanos, el único documento válido es el DNI.",
+            "line3": "Obtén más información acerca de las medidas mejoradas de salud y seguridad, así como otra información que necesitas saber antes de tu visita.",
+            "alert": "Los datos registrados serán verificados en el control de ingreso."
+          }
+        }
+      },
+      "detalle": {
+        "reserva": {
+          "title": "Detalle de la reserva",
+          "line1": "Precio",
+          "line2": "Total",
+          "line3": "Sub total",
+          "line4": "Monto total a pagar",
+          "accept": "Aceptar",
+          "terminos": "términos y condiciones",
+          "alert": "Falta registrar los datos de los visitantes",
+          "actions": {
+            "continue": {
+              "label": "Continuar"
+            },
+            "home": {
+              "label": "Ir al inicio"
+            }
+          }
+        }
+      },
+      "boleto": {
+        "title": "Prerreserva",
+        "fechor": "Fecha y hora",
+        "form": {
+          "title": "Eliminar reserva preliminar",
+          "message": "¿Está seguro de eliminar la reserva preliminar?",
+          "buttons": {
+            "add": "Agregar",
+            "delete": "Eliminar",
+            "cancel": "Cancelar",
+            "accept": "Aceptar"
+          },
+          "delete": "Eliminar",
+          "country": "País de origen",
+          "typedoc": "Tipo de documento",
+          "numdoc": "Número de documento",
+          "seek": "Buscar",
+          "name": "Nombres",
+          "firstname": "Primer Apellido",
+          "lastname": "Segundo Apellido",
+          "birthdate": "Fecha de nacimiento",
+          "sex": "Sexo",
+          "sex1": "Femenino",
+          "sex2": "Masculino",
+          "email": "Correo electrónico (Opcional)",
+          "alert": "Los datos registrados serán verificados en el control de ingreso.",
+          "save": "Guardar",
+          "eliminate": {
+            "title": "Eliminar boleto",
+            "message": "¿Está seguro de eliminar el boleto?",
+            "cancel": "Cancelar",
+            "accept": "Aceptar"
+          },
+          "edad_tarifa": {
+            "title": "Fecha de nacimiento inválida",
+            "message": "Este boleto corresponde a una tarifa general, por lo tanto, la persona debe ser mayor de edad.",
+            "close": "Cerrar"
+          },
+          "alert0999Per": {
+            "title": "Documento no encontrado",
+            "message": "No se ha encontrado información para el documento ingresado.",
+            "close": "Cerrar"
+          },
+          "alert0999Ext": {
+            "title": "Documento no encontrado",
+            "message": "No se ha encontrado información para el documento ingresado, completar los datos manualmente.",
+            "close": "Cerrar"
+          },
+          "error_edad_tarifa": {
+            "title": "Fecha de nacimiento inválida",
+            "message": "La persona es menor de edad, pero este boleto no es para menores de edad.",
+            "close": "Cerrar"
+          },
+          "alert_menor_edad": {
+            "title": "Documento menor de edad",
+            "message": "El DNI ingresado es de un menor de edad, registrar manualmente los datos restantes.",
+            "message2": "El DNI ingresado es de un menor de edad; por lo tanto, no cumple con los requisitos para acceder a esta tarifa.",
+            "close": "Cerrar"
+          },
+          "confirm_edad": {
+            "title": "Documento menor de edad",
+            "message": "Si el visitante ya es mayor de edad para el día de su visita, le solicitamos que ingrese sus datos manualmente en el formulario.",
+            "yes": "Aceptar",
+            "not": "Cancelar"
+          },
+          "afterclose": {
+            "title": "Por favor, complete manualmente los campos faltantes."
+          },
+          "boleto_menor_edad": {
+            "title": "Fecha de nacimiento inválida",
+            "message": "Este boleto es para menores de edad (3-17 años), pero la fecha de nacimiento indica que la persona es mayor de edad.",
+            "close": "Cerrar"
+          },
+          "boleto_adulto_mayor": {
+            "title": "Fecha de nacimiento inválida",
+            "message": "Este boleto corresponde a una tarifa de personas de 60 años a más, por lo tanto, la fecha de nacimiento no es válida.",
+            "close": "Cerrar"
+          }
+        },
+        "modalvisit": {
+          "title": "Agregar visitante",
+          "fechorsel": "Fecha y hora seleccionada",
+          "origin": "Procedencia",
+          "tariff": "Tarifa",
+          "buttons": {
+            "cancel": "Cancelar",
+            "add": "Agregar"
+          }
+        },
+        "saved": {
+          "title": "Guardado",
+          "message": "Se ha guardado la información registrada para el boleto.",
+          "close": "Cerrar"
+        },
+        "alerts": {
+          "code0001": {
+            "title": "Reserva de boletos",
+            "message": "Restringido"
+          },
+          "code9000": {
+            "title": "No se obtuvo respuesta de la PIDE",
+            "message": "Por favor, complete manualmente los campos faltantes."
+          },
+          "btncerrar": "Cerrar"
+        },
+        "valid_docum": {
+          "codigo": {
+            "title": "Documento duplicado",
+            "message1": "El N° de documento ",
+            "message2": " ya se encuentra registrado en otro formulario dentro del proceso actual."
+          },
+          "btncerrar": "Cerrar"
+        }
+      },
+      "pago": {
+        "confirmation": {
+          "title": "Confirmación de tu compra",
+          "message": "Tu compra se ha realizado con éxito.",
+          "destination": "Destino",
+          "amount": "Monto total pagado",
+          "code": "Código de compra",
+          "reservation": "Código de reserva",
+          "fecbuys": "Fecha de la compra",
+          "horbuys": "Hora",
+          "payment": "Medio de pago",
+          "tickets": "Boletos comprados",
+          "downloading": "Descargando...",
+          "download": "Descargar boletos",
+          "fecvisit": "Fecha de la visita",
+          "horvisit": "Hora",
+          "numdoc": "N. documento",
+          "tariff": "Tarifa",
+          "seeReserve": "Ver Reserva",
+          "seepurchase": "Ver mis compras",
+          "home": "Ir al inicio"
+        }
+      },
+      "dialog-alerta": {
+        "btnaccept": "Aceptar"
+      },
+      "reservas-pendientes-de-pago": {
+        "title": "Mis reservas",
+        "line1": "REALIZA EL PAGO DE TU RESERVA ANTES DE SU VENCIMIENTO.",
+        "line2": "También puedes descargar el formato de reserva y pagarlo de manera presencial en las oficinas de recaudación autorizadas.",
+        "line3": "Pagar reserva",
+        "line4": "Pagar reservas",
+        "title_act": "No tienes reservas activas.",
+        "label1": "Activas",
+        "activas": {
+          "table": {
+            "col1": "Código de reserva",
+            "col2": "Fecha de vencimiento",
+            "col3": "Lugar",
+            "col4": "Fecha y hora de ingreso",
+            "col5": "Cantidad de boletos",
+            "col6": "Monto total"
+          }
+        },
+        "title_venc": "No tienes reservas vencidas.",
+        "label2": "Vencidas",
+        "vencidas": {
+          "table": {
+            "col1": "Código de reserva",
+            "col2": "Fecha de creación",
+            "col3": "Venció",
+            "col4": "Lugar",
+            "col5": "Fecha y hora de ingreso",
+            "col6": "Cantidad de boletos",
+            "col7": "Monto total"
+          }
+        },
+        "btn_ir": "Ir al inicio"
+      },
+      "pagos-realizados": {
+        "title": "Mis compras",
+        "message": "No tienes compras.",
+        "table": {
+          "col1": "Código de compra",
+          "message": "Sin reserva",
+          "col2": "Fecha de compra",
+          "col3": "Lugar",
+          "col4": "Cantidad de reservas",
+          "col5": "Cantidad de boletos",
+          "col6": "Medio de pago",
+          "col7": "Monto total"
+        },
+        "home": "Ir al inicio"
+      },
+      "home": {
+        "message": "Agenda tu visita"
+      },
+      "card": {
+        "message": "Precios desde"
+      },
+      "categorias": {
+        "line1": "¿Qué deseas visitar?",
+        "line2": "Todos"
+      },
+      "banner": {
+        "line1": "Selecciona tu destino",
+        "line2": "Buscar"
+      },
+      "agregar-visitante": {
+        "title": "¿La persona con N° documento: {{doc}} será mayor de edad para la fecha de visita?",
+        "message": "",
+        "yes": "Sí",
+        "not": "No",
+        "aftclose": "Por favor, complete manualmente los campos faltantes.",
+        "close": "Cerrar"
+      }
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788635027654
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/gestion-administracion/avisos-public",
+    "body": {
+      "totalData": 0,
+      "code": 200,
+      "data": [],
+      "message": "Success"
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788635027835
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/disponibilidad-actual",
+    "body": [
+      {
+        "nidLugar": 1,
+        "nidCircuito": 1,
+        "nidRuta": 7,
+        "circuito": "Circuito 1 - Panorámico",
+        "ruta": "Ruta 1-A: Montaña Machupicchu",
+        "ncupo": 50,
+        "ncupoActual": 49
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 1,
+        "nidRuta": 8,
+        "circuito": "Circuito 1 - Panorámico",
+        "ruta": "Ruta 1-B: Terraza superior",
+        "ncupo": 100,
+        "ncupoActual": 91
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 2,
+        "nidRuta": 11,
+        "circuito": "Circuito 2 - Circuito clásico",
+        "ruta": "Ruta 2-A: Clásico Diseñada",
+        "ncupo": 600,
+        "ncupoActual": 89
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 2,
+        "nidRuta": 12,
+        "circuito": "Circuito 2 - Circuito clásico",
+        "ruta": "Ruta 2-B: Terraza Inferior",
+        "ncupo": 100,
+        "ncupoActual": 18
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 3,
+        "nidRuta": 13,
+        "circuito": "Circuito 3 - Machupicchu realeza",
+        "ruta": "Ruta 3-A: Montaña Waynapicchu",
+        "ncupo": 50,
+        "ncupoActual": 28
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 3,
+        "nidRuta": 14,
+        "circuito": "Circuito 3 - Machupicchu realeza",
+        "ruta": "Ruta 3-B: Realeza diseñada",
+        "ncupo": 100,
+        "ncupoActual": 95
+      }
+    ]
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788635027990
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788635028155
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/recaudador/ticket/tickets-por-fecha/2026-09-05",
+    "body": {
+      "code": 200,
+      "totalticket": 637,
+      "message": "ok"
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
+    "body": {
+      "response": "8Lvy20J6RvkbYIP5KxTmBMxvqAin2SyHgog0AKwsMpwNBSeBRUSIGsZy8F1mY5Sx36m8x+EiIPNj2lvxiBFTNnatGtx6wTMWTbobc2orioEVhDSLDbr1q0ShJhWaZho08OIAk4lFZZFEcH41C+YWU9stHj2QDcuZzP+OzlmTvnk9+OvZj5ysb7VdUkKCGuY5anD/CkiAVAmguk0IXqXn99T3icZGCNKtTco6PBAKy4LzzZ0dFleMBqo+lyxo9ZoOALJGb0kKgoMpYYl9VHj1B4OrOIvjXmXL2B0EoSIh+x2HPIeNQu2HnS5h+gwXXcyUiNNqTtGq1eiw6ZPiIWS55eTfas4kJRnOILlvbabsrWNrt1/k4t/qbcANJOqWs0OcFNtPhsrNCvxRIXHXUAsmAmuxvjVg/5e9bsjNwtkoT32nkXG8tHaP39/+I+pZBqjIo8F35ayCWZfbz2HXSCshKRWPEzIkNeEiZOfEsyEzUdadSEbZWqrnz5UJ/BqSAnjf"
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
+    "body": {
+      "response": "fWJz3t14OvQ2oACRS5wBo3oZH9Ync2ltR5TrZSfyIqqDV5iclj2x7FimTLdpZBfRb433My7TmGcOMcLnSX9rzV41Bb2L9/IZr5ttdpHy/Jq6XIcZvIADHe8PThOSGJFbOLL/QiO9c5YqqZeGmKoAbhl5/FBVxzYFhZV8Kt5kFjl2+pTY8S5aECPI9G1LTpkahsWJ+hbEUgcB4s2G571Uk+xTkZlWVfrgEzfFCfgvfTUqm9A4ZlyWNE/iaptIwrakixbJsTTUPeGOCcLiAhfnUaUiCxwmiMb8aSQFX2wmKf2vJID2uqOHSJr+DV5qke5QiUIda9LKMmGSk9fwONurxzZX8q8MN3f7AkP3pXu2J6RRfGv20YoSISLmHEYiLk4S2MHnYIiwJnciCcXLET7eo5oF56r3NYlQFVegB7hCazQ="
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
+    "body": {
+      "response": "JMzcOX06UVW3hqem9+1rnsazoHwhFJ9Khplmd9lQ46rOD8vNRXXY27cQL9Nm2n9zCzfHwE3Y93l8vNPc1rkY5bOOyzpWRWiJ0ALHwsGJEG+FIeeMIM3bU/CoJUZIDLxNXjwI6mQqLSX2lS3YXjM79CRQzrJ1O02DVZqNYuvO1X8WJoOmvCkIRs7tAnNG3ofeSf4xGW5bWFw1eX6hwreqoq5eb6IoXaDx7zjxo6/afK5hyMuhQw71AdIsyBKbu7o6tUNiCVbvaOHY69ICXOJ0ahHdJEorj/Au2eYqKTmE47VXBeuHYcUnmBDp86WEjl/WtVTCktilxItLrxPAY8TmTA5HzJrLrjKltOFO68q4b/FQtBVVO1RVhBCxH/s/hhuoh1wQ/4OA3nN2waeifwfXsZzRQeT8dz1DUs0pIcAVlys="
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788635034447
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/disponibilidad-actual",
+    "body": [
+      {
+        "nidLugar": 1,
+        "nidCircuito": 1,
+        "nidRuta": 7,
+        "circuito": "Circuito 1 - Panorámico",
+        "ruta": "Ruta 1-A: Montaña Machupicchu",
+        "ncupo": 50,
+        "ncupoActual": 49
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 1,
+        "nidRuta": 8,
+        "circuito": "Circuito 1 - Panorámico",
+        "ruta": "Ruta 1-B: Terraza superior",
+        "ncupo": 100,
+        "ncupoActual": 91
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 2,
+        "nidRuta": 11,
+        "circuito": "Circuito 2 - Circuito clásico",
+        "ruta": "Ruta 2-A: Clásico Diseñada",
+        "ncupo": 600,
+        "ncupoActual": 89
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 2,
+        "nidRuta": 12,
+        "circuito": "Circuito 2 - Circuito clásico",
+        "ruta": "Ruta 2-B: Terraza Inferior",
+        "ncupo": 100,
+        "ncupoActual": 18
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 3,
+        "nidRuta": 13,
+        "circuito": "Circuito 3 - Machupicchu realeza",
+        "ruta": "Ruta 3-A: Montaña Waynapicchu",
+        "ncupo": 50,
+        "ncupoActual": 28
+      },
+      {
+        "nidLugar": 1,
+        "nidCircuito": 3,
+        "nidRuta": 14,
+        "circuito": "Circuito 3 - Machupicchu realeza",
+        "ruta": "Ruta 3-B: Realeza diseñada",
+        "ncupo": 100,
+        "ncupoActual": 95
+      }
+    ]
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/recaudador/ticket/tickets-por-fecha/2026-09-05",
+    "body": {
+      "code": 200,
+      "totalticket": 637,
+      "message": "ok"
+    }
+  }
+]
