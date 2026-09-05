@@ -506,12 +506,6 @@
     }
   },
   {
-    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
-    "body": {
-      "tiempoServidor": 1788636396059
-    }
-  },
-  {
     "url": "https://api-tuboleto.cultura.pe/gestion-administracion/avisos-public",
     "body": {
       "totalData": 0,
@@ -523,45 +517,45 @@
   {
     "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
     "body": {
-      "tiempoServidor": 1788636396218
+      "tiempoServidor": 1788636765564
     }
   },
   {
     "url": "https://api-tuboleto.cultura.pe/recaudador/ticket/tickets-por-fecha/2026-09-05",
     "body": {
       "code": 200,
-      "totalticket": 650,
+      "totalticket": 661,
       "message": "ok"
     }
   },
   {
     "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
     "body": {
-      "tiempoServidor": 1788636396378
+      "tiempoServidor": 1788636765743
     }
   },
   {
     "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
     "body": {
-      "tiempoServidor": 1788636396537
+      "tiempoServidor": 1788636765903
+    }
+  },
+  {
+    "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
+    "body": {
+      "tiempoServidor": 1788636766085
     }
   },
   {
     "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
     "body": {
-      "response": "WuwF4B1hKtbRpOnA+OGxv/eCIGlomSDMIidaRi9Lhwhr5A+feKxh1F0PbiKPWB0M3SzvEamEiQMn7L7hzu8N/ByR83VZq3pthV99G6tn740wMefYvzscgYFWt+YOjqyAYh0BzuYrC7pHfoJKSWN34IPaSelve0kfl8L/4aAaSBPAkVRQ5ELdr/nKrRX4SD1U+OPN7tWcFo9mpKbvkY2L3x4iKQxeWyrsokOZR7YsHUQNOYrDu7RctNFm69q7xmEuObZ7WxvOae7JvggWOWk0OhC+w6l9fpw4Z2QkCrooR2rWm1sY1RAc8QrdQ6rmx1kuKv+MtuQesIDSTICUeATXBrb0E9W1I4UrUXBvAra+s0qEZa6XJJ0eajc1sTw2HerxYiMpltkZuD0inOfx6QXH03k8x+Sg8fNZOCwXeZTHg6e09Ut1YEX9r0rUkRfbSC/j9uSMYmRfTrjKyvVEQ/VH5samTjsIjQw4ncilBPryAWNTPml97qhLfKabRjPLT+Av"
+      "response": "FRgahGaaMbq0QFvmD8QD0GS3kLqHkp+qlBOPBIIgkHfTn9nbA5FuEgVXZM2TDnDFwVPPgRqb4ayf9GWFHAM1bXGXVgLDDphl3nLW248yJP+Uib+s72mcksbJ9LVzuba+17b3jdLReMC3wCwcLibPQ+qMMVwS1aa6seHavYGpb+GZsbIXKSiHPvgi/pEvjVbzrrD/YXBFoQtRuU2yejAsdOitTlFHb6oWV1irLrtRnlalYnvpjCudCvtz7Ys99St64K2mDAO3EdjYo9ZoZTSXKHEpmpMVyDrLJ0jFVGOZdps91ZkcdfMoEo8pr209k7mx2nbB3LQ3PYqu6V3jbsfJGH2hz/RIASF98ttwysIEYokFn6wPH9p/Bjd/nkU8o8n2z8tpeHquAsi3aomRjr54eCg/IElntBZlbYudS3xXRTmtXrGko7C06xqyWtuqVlUNBZtA0KnZ18cCtUq4s4iNm58gfcoTBJXQIEWR2J0ChRgYGMsbod43dow6WDo15KAb"
     }
   },
   {
     "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
     "body": {
-      "response": "az5inGxB4aFvBiHls7gmbaWJXDgpmbI7ioDe9agvhOHnh437wv5PmMLa88Pgx3sPBtVfpMjgLRydjZSwUPpeIXxcZT+8gVBJuu8hnM0Ewa+qLWa8I6rwJlzWJKVCOmh0KLoPLcFRMMayJd+44LYWYiOWFvyAzRfoYuaTiof0rTW1/xWRxNyrDk9PWLTHDlm+gqYVsnYbPAcBgsejL2a3A/50f8bHpc8VqZdv0STDmIu+/OmpPX/5zlzXD2+sMJM8DRhycPZ4k3vtu6/t3p+GMJWYFFkPEy9nryurwzHFPWNwEDkJRFMLUDOHoqdivtR9spQnMtI8OUi3W6u3IN+VXyCaSxNUCXA3ZOVpu/JIgtmdtZgRIwKhmOvKVk7rUDSFv8KUzUDp1wuvm4b9d5cNN/SVat+lmy0LUMhr+4kVqqs="
-    }
-  },
-  {
-    "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
-    "body": {
-      "response": "mEzPdsUBe71YxwfVcA7oVFo6uDshymcdp5+s5roFD5UQzkotcCZNamnvBO73x6aY2DEBgkqIsz5YxgKGIuwiD9m3QljEhIRylqwZMxTPHBYCqLiiMCeSm4u9NXd25+na4+t8dViEORaOHbFNxFQXS25GbijRf/gVcGtcSwK/nvJUq2OH/WlFkZ2rRU6C3tNCuhW/yS84DdSk+IWAn/Qq3Olm/VGTVrVueJjGdrk0kkHjAJ7xbc+AG6o9wrNF5nU5DxjVa9BJ5bHHN+DgU6qgNrZkF5XxrKLwszJ5Be4pp4BMJN69qWPsEEAizbWrvhR/GwCsvLN/XvHdyd8YF9GkiVXYgFzmmw2gaQoKPkLNe6ta/WrwmEOWLGXFK+pLohHQcjC7zamIPSPtllcPROWy60nHzqOQLMFkrMAI80KD7XE="
+      "response": "wwRp/vbP/Dn3njHqFooa59UW2BiCBXtTkmb7AtbZw4Gue5tzsKmu9UWwFE2udcv3qfcL2C0W2D+7MVoRSbzFvnf4tKi/aVWLZGDaYnWUMObJwlupJ80+lmODLJTE3gkkN5pRCzwimqPH6+uinaUUZM86kgKjx2ywJj7Ey51vxOsPBq40fYETR2xfe8BY4RWbSlFy6aPqslu4FKk5lVO5s18DeetRJk2havhjkswt0cotteQjImvmwQsEJMeX36620GW6UqreGg5bW93YclPbIKIN1fJAZpAAoHRGW1m77k3p+87KLDKtM7i9/2sXHMSUa32Deu7fj5L8Row94WD5cyarNWwC2xk5XL0kVFMr92zbToS0RxwafKiWTuRqovflFKbpOMW47FNpoJwMhkSVxLnvEQvfRP4yblcF6rl3Jh0="
     }
   },
   {
@@ -592,7 +586,7 @@
         "circuito": "Circuito 2 - Circuito clásico",
         "ruta": "Ruta 2-A: Clásico Diseñada",
         "ncupo": 600,
-        "ncupoActual": 87
+        "ncupoActual": 85
       },
       {
         "nidLugar": 1,
@@ -610,7 +604,7 @@
         "circuito": "Circuito 3 - Machupicchu realeza",
         "ruta": "Ruta 3-A: Montaña Waynapicchu",
         "ncupo": 50,
-        "ncupoActual": 26
+        "ncupoActual": 24
       },
       {
         "nidLugar": 1,
@@ -624,9 +618,15 @@
     ]
   },
   {
+    "url": "https://api-tuboleto.cultura.pe/cuenta/consulta/getDatosParametro",
+    "body": {
+      "response": "39XoqGpy/pE8CibJCk1pOaB1ZAP6QIqtGox4itiIhHW5YBAu2arSth1swaZ/piqVscVQpAzgC1/4EDToMdMU512Y/lDcJ+S534arxn7pUAqAaDMj1dtIYdCkSjI9BgPbazRTCArqNeDyM6X/VzCrGPeSfandQKjhy94PcGo93cngkbyVv2n7k3P57A43UT896ML8HEcaQDa177SJSiWo99Z7L502srLvQh8cokkzKFAiYy538hnR+ZfECLyqSk8BOEES3wg/alr9daSH65YA0hMkhZxpUwGLziM8+uaaTV7GHDSz5hgJMJrpaoO90lgxYn60EKlw1R1Ha66Dc9rSbGF3Vaaynfwxk5+y6Y3hMrCCeXPj4MepLibVJcvTJHznX7/e2EsUG8J5C/eJt6FNmmU2tAmIVHev1vyJbr1zvgc="
+    }
+  },
+  {
     "url": "https://api-tuboleto.cultura.pe/comunes/tiempo-servidor",
     "body": {
-      "tiempoServidor": 1788636402702
+      "tiempoServidor": 1788636772947
     }
   },
   {
@@ -657,7 +657,7 @@
         "circuito": "Circuito 2 - Circuito clásico",
         "ruta": "Ruta 2-A: Clásico Diseñada",
         "ncupo": 600,
-        "ncupoActual": 87
+        "ncupoActual": 85
       },
       {
         "nidLugar": 1,
@@ -675,7 +675,7 @@
         "circuito": "Circuito 3 - Machupicchu realeza",
         "ruta": "Ruta 3-A: Montaña Waynapicchu",
         "ncupo": 50,
-        "ncupoActual": 26
+        "ncupoActual": 24
       },
       {
         "nidLugar": 1,
@@ -692,7 +692,7 @@
     "url": "https://api-tuboleto.cultura.pe/recaudador/ticket/tickets-por-fecha/2026-09-05",
     "body": {
       "code": 200,
-      "totalticket": 650,
+      "totalticket": 661,
       "message": "ok"
     }
   }
