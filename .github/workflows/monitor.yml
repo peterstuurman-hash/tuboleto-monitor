@@ -2,8 +2,8 @@ name: Tuboleto 2A monitor
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # elke 30 minuten
-  workflow_dispatch:          # handmatige startknop voor testen
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,28 +15,19 @@ concurrency:
 jobs:
   meting:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Installeer Playwright
-        run: |
-          npm install playwright
-          npx playwright install --with-deps chromium
-
       - name: Voer meting uit
         run: node tuboleto-2a-monitor.js
-
-      - name: Sla resultaat op in de repository
+      - name: Sla resultaat op
         run: |
           git config user.name "monitor-bot"
           git config user.email "bot@users.noreply.github.com"
           git add tuboleto_2a_log.csv
-          git add api_dump || true
           git commit -m "meting $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "geen wijziging"
           git pull --rebase origin main || true
           git push
