@@ -15,12 +15,16 @@ concurrency:
 jobs:
   meting:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Installeer Playwright
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
       - name: Voer meting uit
         run: node tuboleto-2a-monitor.js
       - name: Sla resultaat op
