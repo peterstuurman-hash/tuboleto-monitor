@@ -1,9 +1,10 @@
-// tuboleto-2a-monitor.js — v3: leest direct de open API, geen browser nodig
+// tuboleto-2a-monitor.js — v4: browserversie, leest ncupoActual voor Ruta 2-A
 
+const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 
-const API = 'https://api-tuboleto.cultura.pe/comunes/disponibilidad-actual';
+const URL = 'https://tuboleto.cultura.pe/disponibilidad/llaqta_machupicchu';
 const CSV = path.join(__dirname, 'tuboleto_2a_log.csv');
 
 function peruTime(d = new Date()) {
@@ -16,19 +17,27 @@ function peruTime(d = new Date()) {
       'timestamp_utc,timestamp_peru,ruta,capaciteit,beschikbaar\n');
   }
 
-  const res = await fetch(API, {
-    headers: {
-      'Accept': 'application/json',
-      'Referer': 'https://tuboleto.cultura.pe/',
-      'Origin': 'https://tuboleto.cultura.pe',
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-    }
-  });
-  if (!res.ok) throw new Error('API gaf status ' + res.status);
-  const data = await res.json();
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+  const hits = [];
 
-  const row = data.find((r) => /2-?A/i.test(r.ruta || ''));
-  if (!row) throw new Error('Ruta 2-A niet gevonden in API-antwoord');
+  page.on('response', async (res) => {
+    try {
+      if (!res.url().includes('disponibilidad-actual')) return;
+      const body = await res.json();
+      if (Array.isArray(body)) hits.push(body);
+    } catch (_) {}
+  });
+
+  await page.goto(URL, { waitUntil: 'networkidle', timeout: 60000 });
+  await page.waitForTimeout(8000);
+  await browser.close();
+
+  if (hits.length === 0) throw new Error('Geen disponibilidad-data opgevangen');
+  const latest = hits[hits.length - 1];
+
+  const row = latest.find((r) => /2-?A/i.test(r.ruta || ''));
+  if (!row) throw new Error('Ruta 2-A niet gevonden in de data');
 
   const utc = new Date().toISOString();
   const lima = peruTime();
