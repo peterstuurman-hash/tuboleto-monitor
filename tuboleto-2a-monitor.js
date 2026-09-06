@@ -24,4 +24,15 @@ function peruTime(d = new Date()) {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
     }
   });
-  if (!res.ok) throw new
+  if (!res.ok) throw new Error('API gaf status ' + res.status);
+  const data = await res.json();
+
+  const row = data.find((r) => /2-?A/i.test(r.ruta || ''));
+  if (!row) throw new Error('Ruta 2-A niet gevonden in API-antwoord');
+
+  const utc = new Date().toISOString();
+  const lima = peruTime();
+  fs.appendFileSync(CSV,
+    utc + ',' + lima + ',"' + row.ruta + '",' + row.ncupo + ',' + row.ncupoActual + '\n');
+  console.log(lima + ' | ' + row.ruta + ' | ' + row.ncupoActual + ' van ' + row.ncupo + ' beschikbaar');
+})();
