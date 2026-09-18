@@ -2,7 +2,13 @@ name: Tuboleto 2A monitor
 
 on:
   schedule:
+    # Overdag elk kwartier. GitHub voert geplande workflows uit wanneer het uitkomt, dus in de
+    # praktijk komen er 75 tot 81 metingen per dag binnen in plaats van 96.
     - cron: '*/15 * * * *'
+    # Rond de vrijgave zo dicht mogelijk erbovenop. Die valt elke dag om 19:14 Peruaanse tijd
+    # (= 00:14 UTC), en dat is het moment waarop je wilt zien hoe groot de pot is. Vijf minuten is
+    # het fijnste raster dat GitHub toestaat.
+    - cron: '*/5 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -31,6 +37,8 @@ jobs:
         run: |
           git config user.name "monitor-bot"
           git config user.email "bot@users.noreply.github.com"
+          # Eerst de nieuwe regels veiligstellen, dan pas ophalen: draait er een meting tegelijk,
+          # dan zet de rebase onze regels er netjes achter in plaats van dat er één verdwijnt.
           git add tuboleto_2a_log.csv
           git commit -m "meting $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "geen wijziging"
           git pull --rebase origin main || true
