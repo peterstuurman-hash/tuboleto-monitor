@@ -2,12 +2,10 @@ name: Tuboleto 2A monitor
 
 on:
   schedule:
-    # Overdag elk kwartier. GitHub voert geplande workflows uit wanneer het uitkomt, dus in de
-    # praktijk komen er 75 tot 81 metingen per dag binnen in plaats van 96.
-    - cron: '*/15 * * * *'
-    # Extra dicht op het moment dat de volgende dag opengaat: dat gebeurt rond 13:45-14:30
-    # Peruaanse tijd, dus 18:45-19:30 UTC. Vijf minuten is het fijnste raster dat GitHub toestaat.
-    - cron: '*/5 18-20 * * *'
+    # Eén start per uur. GitHub laat geplande starts vallen, en knijpt juist de repo's af die er
+    # veel vragen. We vragen er daarom 24 per dag in plaats van 132 en doen het meetwerk binnen
+    # de job zelf: een gemiste start kost één uur in plaats van een willekeurig gat.
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +18,7 @@ concurrency:
 jobs:
   meting:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,15 +28,38 @@ jobs:
         run: |
           npm install playwright
           npx playwright install --with-deps chromium
-      - name: Voer meting uit
-        run: node tuboleto-2a-monitor.js
-      - name: Sla resultaat op
+      - name: Meet dit uur vol
         run: |
           git config user.name "monitor-bot"
           git config user.email "bot@users.noreply.github.com"
-          # Eerst de nieuwe regels veiligstellen, dan pas ophalen: draait er een meting tegelijk,
-          # dan zet de rebase onze regels er netjes achter in plaats van dat er één verdwijnt.
-          git add -A tuboleto_log.csv tuboleto_2a_log.csv
-          git commit -m "meting $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "geen wijziging"
-          git pull --rebase origin main || true
-          git push
+
+          uur=$(TZ=America/Lima date +%-H)
+          # Overdag in Peru elk kwartier. Rond het moment dat de volgende dag opengaat (13:45-14:30
+          # Peruaanse tijd) elke vijf minuten. Buiten die uren één meting per uur.
+          case "$uur" in
+            13|14)        interval=300 ;;
+            [6-9]|1[0-6]) interval=900 ;;
+            *)            interval=0 ;;
+          esac
+
+          # Stoppen op 55 minuten na het hele uur, zodat de start van het volgende uur niet achter
+          # deze job in de wachtrij komt.
+          nu=$(date -u +%s)
+          deadline=$(( nu - (nu % 3600) + 55*60 ))
+
+          while :; do
+            node tuboleto-2a-monitor.js || echo "meting mislukt, we gaan door"
+
+            # Eerst de nieuwe regels veiligstellen, dan pas ophalen: draait er een meting tegelijk,
+            # dan zet de rebase onze regels er netjes achter in plaats van dat er één verdwijnt.
+            git add -A tuboleto_log.csv tuboleto_2a_log.csv
+            git commit -m "meting $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "geen wijziging"
+            git pull --rebase origin main || true
+            git push || true
+
+            if [ "$interval" -eq 0 ]; then break; fi
+            nu=$(date -u +%s)
+            volgende=$(( nu + interval - (nu % interval) ))
+            if [ "$volgende" -ge "$deadline" ]; then break; fi
+            sleep $(( volgende - nu ))
+          done
