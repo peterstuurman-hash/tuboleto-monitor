@@ -18,16 +18,25 @@ concurrency:
 jobs:
   meting:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    # Krap onder het uur. Loopt een job langer, dan staat de start van het volgende uur in de
+    # wachtrij en verlies je dat uur er ook nog bij.
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Installeer Playwright
+        # 'playwright install --with-deps' draait een apt-get update, en die liep op 7 oktober een
+        # uur lang vast op archive.ubuntu.com. Vijf minuten per poging, twee pogingen: een hapering
+        # kost nu een paar minuten van dit uur in plaats van het hele uur plus het volgende.
+        timeout-minutes: 12
         run: |
-          npm install playwright
-          npx playwright install --with-deps chromium
+          timeout 240 npm install playwright || timeout 240 npm install playwright
+          if ! timeout 300 npx playwright install --with-deps chromium; then
+            echo "installatie liep vast, nog één poging"
+            timeout 300 npx playwright install --with-deps chromium
+          fi
       - name: Meet dit uur vol
         run: |
           git config user.name "monitor-bot"
@@ -50,15 +59,19 @@ jobs:
           gelukt=0
           mislukt=0
 
+          # Het script kijkt zelf een minuut mee en heeft eigen timeouts, maar een vastgelopen
+          # browser mag de rest van het uur niet opeten.
+          meet() { timeout 240 node tuboleto-2a-monitor.js; }
+
           while :; do
             # Eén herkansing. De site hapert af en toe en levert dan geen disponibilidad-antwoord;
             # buiten het meetvenster is dit de enige meting van het uur, dus dat is het wachten waard.
-            if node tuboleto-2a-monitor.js; then
+            if meet; then
               gelukt=$(( gelukt + 1 ))
             else
               echo "meting mislukt, over 30 seconden nog één keer"
               sleep 30
-              if node tuboleto-2a-monitor.js; then
+              if meet; then
                 gelukt=$(( gelukt + 1 ))
               else
                 mislukt=$(( mislukt + 1 ))
@@ -70,8 +83,8 @@ jobs:
             # dan zet de rebase onze regels er netjes achter in plaats van dat er één verdwijnt.
             git add -A tuboleto_log.csv tuboleto_2a_log.csv
             git commit -m "meting $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "geen wijziging"
-            git pull --rebase origin main || true
-            git push || true
+            timeout 120 git pull --rebase origin main || true
+            timeout 120 git push || true
 
             if [ "$interval" -eq 0 ]; then break; fi
             nu=$(date -u +%s)
