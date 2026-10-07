@@ -47,8 +47,24 @@ jobs:
           nu=$(date -u +%s)
           deadline=$(( nu - (nu % 3600) + 55*60 ))
 
+          gelukt=0
+          mislukt=0
+
           while :; do
-            node tuboleto-2a-monitor.js || echo "meting mislukt, we gaan door"
+            # Eén herkansing. De site hapert af en toe en levert dan geen disponibilidad-antwoord;
+            # buiten het meetvenster is dit de enige meting van het uur, dus dat is het wachten waard.
+            if node tuboleto-2a-monitor.js; then
+              gelukt=$(( gelukt + 1 ))
+            else
+              echo "meting mislukt, over 30 seconden nog één keer"
+              sleep 30
+              if node tuboleto-2a-monitor.js; then
+                gelukt=$(( gelukt + 1 ))
+              else
+                mislukt=$(( mislukt + 1 ))
+                echo "ook de herkansing mislukte, we gaan door"
+              fi
+            fi
 
             # Eerst de nieuwe regels veiligstellen, dan pas ophalen: draait er een meting tegelijk,
             # dan zet de rebase onze regels er netjes achter in plaats van dat er één verdwijnt.
@@ -63,3 +79,11 @@ jobs:
             if [ "$volgende" -ge "$deadline" ]; then break; fi
             sleep $(( volgende - nu ))
           done
+
+          echo "dit uur: $gelukt gelukt, $mislukt mislukt"
+          # Rood maken als er dit uur niets gemeten is. Anders staat Actions vol vinkjes terwijl
+          # de data stilstaat, en dat is precies het verkeerde signaal.
+          if [ "$gelukt" -eq 0 ]; then
+            echo "::error::geen enkele meting gelukt dit uur"
+            exit 1
+          fi
